@@ -152,3 +152,4 @@ G:\My Project\SecureMicroservices\Movies.Client\obj\Debug\net5.0\Razor\Views\Mov
 G:\My Project\SecureMicroservices\Movies.Client\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 G:\My Project\SecureMicroservices\Movies.Client\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 G:\My Project\SecureMicroservices\Movies.Client\bin\Debug\net5.0\IdentityModel.dll
+G:\My Project\SecureMicroservices\Movies.Client\obj\Debug\net5.0\Razor\Views\Movies\OnlyAdmin.cshtml.g.cs

@@ -13,7 +13,7 @@ namespace IdentityServer
     public class Config
     {
         public static IEnumerable<Client> Clients =>
-            new Client[] { 
+            new Client[] {
             new Client
             {
                 ClientId="movieClient",
@@ -48,35 +48,40 @@ namespace IdentityServer
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.Address,
-                    "movieAPI"
+
+                    "movieAPI","roles"
                 }
             }
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
-         new ApiScope[] { 
+         new ApiScope[] {
          new ApiScope("movieAPI","Movie Api")
-         
+
          };
 
         public static IEnumerable<ApiResource> ApiResources =>
          new ApiResource[] { };
 
         public static IEnumerable<IdentityResource> IdentityResources =>
-         new IdentityResource[] { 
-         
+         new IdentityResource[] {
+
          new IdentityResources.OpenId(),
          new IdentityResources.Profile(),
          new IdentityResources.Email(),
-         new IdentityResources.Address()
-         
+         new IdentityResources.Address(),
+         new IdentityResource(
+            "roles",
+            "Your role(s)",
+            new List<string>{"role"}),
+
          };
 
-       
+
 
         public static List<TestUser> TestUsers =>
-         new List<TestUser>{ 
-         
+         new List<TestUser>{
+
          new TestUser
          {
              SubjectId="j3u1rfhefu-dfkjnjfsjdf-21jkkj41hjk422313",
@@ -88,7 +93,7 @@ namespace IdentityServer
                  new Claim(JwtClaimTypes.FamilyName,"Safari")
              }
          }
-         
+
          };
 
 
